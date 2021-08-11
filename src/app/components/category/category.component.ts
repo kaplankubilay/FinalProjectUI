@@ -10,6 +10,8 @@ import { CategoryService } from 'src/app/services/category.service';
 export class CategoryComponent implements OnInit {
 
   categories:Category[]=[];
+  currentCategory:Category;
+  isActive:boolean=false;
   
   constructor(private categoryService:CategoryService) { }
 
@@ -21,6 +23,19 @@ export class CategoryComponent implements OnInit {
     this.categoryService.getCategories().subscribe(response=>{
       this.categories=response.data;
     });
+  }
+
+  setCurrentCategory(category:Category){
+    this.currentCategory=category;
+  }
+
+  getCurrentCategoryClass(category:Category){
+    if(category==this.currentCategory){
+      return "list-group-item active";
+    }
+    else{
+      return "list-group-item";
+    }
   }
 
 }
