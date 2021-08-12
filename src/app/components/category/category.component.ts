@@ -47,9 +47,8 @@ export class CategoryComponent implements OnInit {
     }
   }
 
-  clearCategoryId(){
-    
-    this.currentCategory.categoryId=null;
+  clearCategoryId(){    
+    this.currentCategory=null;
   }
 
 }
