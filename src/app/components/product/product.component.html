@@ -14,7 +14,7 @@
     </thead>
     <tr *ngFor='let product of products'>
         <td>{{product.productId}}</td>
-        <td>{{product.productName}}</td>
+        <td>{{product.productName | uppercase }}</td>
         <td>{{product.categoryId}}</td>
         <td>{{product.unitPrice}}</td>
         <td>{{product.unitsInStock}}</td>
