@@ -30,6 +30,6 @@ export class CartService {
 
   removeFromCartMetod(product:Product){
     let item:CartItem =CartItems.find(c=>c.product.productId===product.categoryId);
-    CartItems.slice(CartItems.indexOf(item),1);
+    CartItems.splice(CartItems.indexOf(item),1);
   }
 }
